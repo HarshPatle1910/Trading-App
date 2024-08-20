@@ -28,7 +28,6 @@ class LoginPage extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
-                // padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
               ),
               onPressed: () {
                 // Implement login logic here
@@ -47,7 +46,59 @@ class LoginPage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text("Login page"),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.blueAccent,
+              width: 0.2,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          ),
+          width: 400,
+          height: 200,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "Trading Tick",
+                style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                color: Colors.transparent,
+                width: 220,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(20),
+                      backgroundColor: Colors.transparent),
+                  onPressed: () {
+                    // Implement login logic here
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                          width: 25,
+                          height: 25,
+                          child: Image(
+                              image: AssetImage('images/google_logo.png'))),
+                      Text(
+                        'Login with Google',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
